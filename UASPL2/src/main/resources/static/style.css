@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Color */
+:root {
+    --primary-color: #D4A33A;
+    --danger-color: #E53935;
+    --success-color: #43A047;
+    --secondary-color: #757575;
+    --bg-color: #FDF8F5;
+    --card-bg-color: #FFFFFF;
+    --text-color: #333333;
+    --border-color: #C5C5C5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+main {
+    width: 100%;
+    max-width: 600px; /* Sedikit lebih lebar untuk form */
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(212, 163, 58, 0.2);
+}
+
+.radio-group label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #c09334;
+    transform: translateY(-2px);
+}
+
+.pesan {
+    margin-top: 1.5rem;
+    padding: 0.85rem;
+    border-radius: 4px;
+    text-align: center;
+    display: none;
+    border: 1px solid transparent;
+}
+
+.pesan.sukses {
+    background-color: #e8f5e9;
+    color: var(--success-color);
+    border-color: var(--success-color);
+    display: block;
+}
+
+.pesan.gagal {
+    background-color: #ffcdd2;
+    color: var(--danger-color);
+    border-color: var(--danger-color);
+    display: block;
+}
